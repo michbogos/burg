@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    #dropdown_menu {
+      @apply flex flex-row lg:justify-around md:justify-center lg:w-full md:w-1/5 lg:gap-4 md:gap-0 h-5;
+    }
+    li{
+      @apply bg-white hover:bg-slate-200;
+    }
+    ul{
+      @apply drop-shadow-md;
+    }
+    a{
+      @apply lg:m-2 md:m-0 block;
+    }
+  }
+
+li.menu-item-has-children{
+  display: flex;
+  flex-direction: column;
+  width:15ch;
+}
+
+li.menu-item-has-children:hover > ul{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    width:15ch;
+}
+
+li.menu-item-has-children > ul{
+    display:none;
+}
