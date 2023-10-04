@@ -6,7 +6,7 @@
     #dropdown_menu {
       @apply flex flex-row lg:justify-around md:justify-center lg:w-full md:w-1/5 lg:gap-4 md:gap-0 h-5;
     }
-    li{
+    .top_nav_li{
       @apply bg-white hover:bg-slate-200;
     }
     ul{

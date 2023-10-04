@@ -1,6 +1,6 @@
 <?php class Menu_Walker extends Walker_Nav_Menu {
     	function start_el(&$output, $item, $depth=0, $args=[], $id=0) {
-    		$output .= "<li class='" .  implode(" ", $item->classes) . "'>";
+    		$output .= "<li class='top_nav_li " .  implode(" ", $item->classes) . "'>";
      
     		if ($item->url && $item->url != '#') {
     			$output .= '<a class="top_nav_link" href="' . $item->url . '">';
