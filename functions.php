@@ -45,6 +45,17 @@ function register_my_menus() {
         'after_title'   => '</h3>',
       )
     );
+    register_sidebar(
+      array(
+        'id'            => 'left',
+        'name'          => 'The left sidebar',
+        'description'   => 'This sidebar will appear on the right',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+      )
+    );
      /* Repeat register_sidebar() code for additional sidebars. */
    }
 ?>

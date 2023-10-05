@@ -21,7 +21,7 @@
             </div>
           <?php endforeach; ?>
           </div>
-          <?php get_sidebar("left")?>
+          <?php get_sidebar("right")?>
         </div>
       </div>
       <?php get_footer()?>
