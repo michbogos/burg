@@ -13,7 +13,7 @@
         <div class="lg:gap-4 sm:gap-1 grid w-11/12 lg:grid-cols-5 md:grid-cols-1 lg:m-5 sm:m-0">
           <div class="lg:col-span-4 md:col-span-1 flex flex-col bg-white rounded-xl drop-shadow-lg p-5">
           <?php foreach (get_posts() as $post):?>
-            <div class="flex flex-col">
+            <div class="flex flex-col relative z-0">
               <h1 class="text-3xl"><?php echo $post->post_title?></h1>
               <div>
                 <?php echo $post->post_content?>
@@ -21,7 +21,7 @@
             </div>
           <?php endforeach; ?>
           </div>
-          <?php get_sidebar("right")?>
+          <?php get_sidebar("left")?>
         </div>
       </div>
       <?php get_footer()?>

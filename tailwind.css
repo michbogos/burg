@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+}
+
 @layer components {
     #dropdown_menu {
-      @apply flex flex-row lg:justify-around md:justify-center lg:w-full md:w-1/5 lg:gap-4 md:gap-0 h-5;
+      @apply flex flex-row lg:justify-around md:justify-center lg:w-full md:w-1/5 lg:gap-4 md:gap-0 h-5 relative z-10;
     }
     .top_nav_li{
-      @apply bg-white hover:bg-slate-200;
+      @apply bg-white relative z-10 hover:bg-slate-200 flex flex-col;
     }
     ul{
       @apply drop-shadow-md;
@@ -15,12 +27,17 @@
     a{
       @apply lg:m-2 md:m-0 block;
     }
+    .wp-block-heading{
+      @apply text-3xl;
+    }
   }
 
 li.menu-item-has-children{
   display: flex;
   flex-direction: column;
   width:15ch;
+  position:relative;
+  z-index: 100;
 }
 
 li.menu-item-has-children:hover > ul{
@@ -28,8 +45,12 @@ li.menu-item-has-children:hover > ul{
     display: flex;
     flex-direction: column;
     width:15ch;
+    position:relative;
+    z-index: 100;
 }
 
 li.menu-item-has-children > ul{
     display:none;
+    position:relative;
+    z-index: 100;
 }

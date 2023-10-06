@@ -18,6 +18,11 @@ function theme_setup() {
     add_theme_support( 'html5', array('style','script', ) );
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
+    add_theme_support( 'title-tag' );
+    add_theme_support( 'custom-logo', array(
+        'height' => 480,
+        'width'  => 720,
+    ) );
 }
 endif; // myfirsttheme_setup
 add_action( 'after_setup_theme', 'theme_setup' );
@@ -49,6 +54,17 @@ function register_my_menus() {
       array(
         'id'            => 'left',
         'name'          => 'The left sidebar',
+        'description'   => 'This sidebar will appear on the right',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+      )
+    );
+    register_sidebar(
+      array(
+        'id'            => 'bottom',
+        'name'          => 'The bottom sidebar',
         'description'   => 'This sidebar will appear on the right',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
