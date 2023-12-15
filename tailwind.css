@@ -16,10 +16,10 @@
 
 @layer components {
     #dropdown_menu {
-      @apply flex flex-row lg:justify-around md:justify-center lg:w-full md:w-1/5 lg:gap-4 md:gap-0 h-5 relative z-10;
+      @apply flex flex-row justify-around lg:w-full md:w-1/5 lg:gap-4 md:gap-0 h-5 relative z-10;
     }
     .top_nav_li{
-      @apply bg-white relative z-10 hover:bg-slate-200 flex flex-col;
+      @apply bg-white relative z-10 hover:bg-slate-200 flex flex-col w-12;
     }
     ul{
       @apply drop-shadow-md;
@@ -41,10 +41,8 @@ li.menu-item-has-children{
 }
 
 li.menu-item-has-children:hover > ul{
-    float: right;
     display: flex;
     flex-direction: column;
-    width:15ch;
     position:relative;
     z-index: 100;
 }
